@@ -65,7 +65,7 @@ export default function Avatar({ imageDetails }) {
 
       <section className="">{image.explanation}</section>
       <p>By {image.copyright}</p>
-      <Date dateString={image.date}></Date>
+      <p>{format(parseISO(selectedDate), "LLLL d, yyyy")}</p>
     </Layout>
   ) : (
     <Layout>
@@ -90,7 +90,7 @@ export default function Avatar({ imageDetails }) {
 
       <section className="">{imageDetails.explanation}</section>
       <p>By {imageDetails.copyright}</p>
-      <Date dateString={imageDetails.date}></Date>
+      <p>{format(parseISO(selectedDate), "LLLL d, yyyy")}</p>
     </Layout>
   );
 }
